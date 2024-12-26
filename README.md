@@ -1,37 +1,112 @@
-# Navigation Routing System
+# NavGraph
 
-## Description
+NavGraph is a comprehensive project for managing, analyzing, and visualizing directed graphs. It includes a robust implementation in C++ for graph data management and pathfinding, combined with Python-based visualization using NetworkX and Matplotlib.
 
-The **Navigation Routing System** is designed to provide an efficient route-finding solution using the A* algorithm for pathfinding in a graph. This system leverages both C++ for computational efficiency and Python for high-level scripting and visualization. The core components include:
-
-* **Graph Class**: Implements graph data structures and pathfinding algorithms.
-* **A* Algorithm**: Finds the shortest path between two nodes using the Euclidean distance as a heuristic.
-* **Pybind11 Integration**: Provides Python bindings for the graph class, allowing the use of C++ algorithms in Python scripts.
-* **Visualization**: Utilizes Python’s `matplotlib` and `networkx` libraries to visualize graphs and the shortest path.
+---
 
 ## Features
 
-* Graph construction with nodes and edges.
-* A* algorithm for pathfinding between two nodes.
-* Visual representation of the graph and shortest path.
-* Python bindings for C++ graph implementation using pybind11.
-* Flexible to handle undirected weighted graphs and coordinates for heuristic-based search.
+### C++ Implementation
+- **Graph Operations**:
+  - Add, remove nodes and edges
+  - Save graph to a text file
+- **A* Pathfinding Algorithm**:
+  - Heuristic-based shortest path computation
+- **Graph Statistics**:
+  - Node and edge counts
+  - Average edge weight
+  - Graph density
 
-## Setup and Installation
+### Python Visualization
+- **Graph Loading**:
+  - Reads the graph from the C++ output file
+- **Visualization**:
+  - Node and edge rendering
+  - Displays edge weights and directed edges
+  - Clean and customizable layout
+
+---
+
+## Installation
 
 ### Prerequisites
+- C++17 or later
+- Python 3.8 or later
+- Required Python libraries:
+  ```bash
+  pip install networkx matplotlib
+  ```
 
-* **CMake** version 3.10 or higher
-* **Python** 3.x
-* **pybind11** library for Python bindings
-* **matplotlib** and **networkx** for visualization (Python)
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/WasayJatt/Routing-system.git
+   ```
+2. Compile the C++ code:
+   ```bash
+   g++ -o NavGraph main.cpp -std=c++17
+   ```
+3. Run the Python script:
+   ```bash
+   python Graph_Visualizer.py
+   ```
 
-## Installation Steps
+---
 
-### 1. Install CMake (if not already installed)
+## Usage
 
-You can install CMake using the following commands:
+### C++ Application
+1. Execute the compiled C++ program:
+   ```bash
+   ./navgraph
+   ```
+2. Use the interactive menu to perform operations such as adding nodes, adding edges, removing edges, and finding paths.
+3. Save the graph to a file for visualization.
 
-For Ubuntu/Debian:
-```bash
-sudo apt-get install cmake
+### Python Visualization
+1. Ensure the graph text file (e.g., `graph.txt`) is available.
+2. Run the Python visualization script:
+   ```bash
+   python Graph_Visualizer.py
+   ```
+3. View the generated graph with nodes, edges, and weights.
+
+
+---
+
+## Examples
+
+### C++ Application
+Example graph operations:
+- Adding nodes and edges
+  ```
+  Enter node ID: 1
+  Enter label: Start
+  Enter source node, destination node, and weight: 1 2 10
+  ```
+- Finding the shortest path using A*:
+  ```
+  Enter start node: 1
+  Enter goal node: 5
+  Shortest path from 1 to 5: 1 -> 2 -> 5
+  ```
+
+### Python Visualization
+Example graph visualization:
+![Graph Visualization](C:/Users/wasay/OneDrive/Documents/old_graph/plot2.png)
+
+---
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for more details.
+
+---
+
+
+## Contact
+
+For questions or suggestions, feel free to reach out:
+- **Author**: Abdul Wasay Ali Khaled
+- **Email**: wasay@outlook.com
+  
