@@ -93,7 +93,7 @@ Example graph operations:
 
 ### Python Visualization
 Example graph visualization:
-![Graph Visualization](C:/Users/wasay/OneDrive/Documents/old_graph/plot2.png)
+![Graph Visualization](plot2.png)
 
 ---
 
